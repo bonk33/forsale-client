@@ -10,7 +10,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import registerServiceWorker from './registerServiceWorker';
 
 const client = new ApolloClient({
-    link: new HttpLink({ uri: 'http://bonk33.pythonanywhere.com/graphql' }),
+    link: new HttpLink({ uri: 'https://bonk33.pythonanywhere.com/graphql' }),
     cache: new InMemoryCache()
 })
 

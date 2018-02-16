@@ -1,0 +1,31 @@
+.category-panel {
+    background: rgb(255, 251, 221);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.14);
+    padding: 12px;
+    border-radius: 3px;
+    margin: 1.5rem 0;
+}
+
+.category-panel-heading {
+    margin: 4px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.category-panel-list {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.category-panel-item {
+    /* border: 1px solid black; */
+    list-style: none;
+    padding: 0;
+    margin: 8px;
+}
+
+.category-panel-link {
+    color: rgb(17, 109, 180);
+    text-decoration: none;
+}

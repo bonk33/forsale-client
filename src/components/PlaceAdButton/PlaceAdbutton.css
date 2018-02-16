@@ -1,0 +1,17 @@
+.place-ad-button {
+    color: white;
+    display: block;
+    text-decoration: none;
+    background: rgb(17, 109, 180);
+    box-shadow : inset 0 -2px 0 0 #0f61a1;
+    padding: 8px 12px;
+    text-align: center;
+    width: 100px;
+    margin: auto;
+    border-radius: 3px;
+    
+}
+
+.place-ad-button:hover {
+    background: rgb(10, 136, 233);
+}

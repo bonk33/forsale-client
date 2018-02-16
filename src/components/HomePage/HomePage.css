@@ -1,0 +1,38 @@
+.homepage-container {
+    display: flex;
+    margin: 1rem 0;
+    justify-content: space-between;
+}
+
+.homepage-side {
+    flex: 0 0 20%;
+
+} 
+.homepage-main {
+    flex: 0 0 78%;
+}
+
+.homepage-main .place-ad-button {
+    display: none;
+}
+
+.listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4px;
+}
+
+@media screen and (max-width: 760px) {
+    .homepage-side {
+        display: none;
+    }
+    
+    .homepage-main {
+        flex: 0 0 100%;
+    }
+    .homepage-main .place-ad-button {
+        display: block;
+        margin: 2rem auto;
+    }
+}

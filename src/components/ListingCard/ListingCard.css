@@ -1,0 +1,58 @@
+.listing-card {
+    background: rgb(255, 255, 255);
+    display: inline-block;
+    width: 185.078px; /* 23.5% */
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+    padding: 0;
+    margin: 0.2rem;
+    transition: box-shadow 0.5s;
+}
+
+.listing-card:hover {
+    transition: box-shadow 0.5s;
+    box-shadow: 1px 2px 4px 0 rgba(0,0,0,.28)
+    
+}
+
+.listing-card-figure {
+    height: 136px;
+    line-height: 136px;
+    color: rgb(17, 109, 180);
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+.listing-card-image {
+    max-height: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.listing-card-content {
+    color: rgb(17, 109, 180);
+    cursor: pointer;
+    margin: 0;
+    padding: 8px 12px 12px 12px;
+}
+
+.listing-card-title {
+    white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+    text-overflow: ellipsis;
+}
+
+.listing-card-price {
+    font-size: 18px;
+    color: rgb(45, 60, 77);
+    line-height: 22px;
+}
+
+@media screen and (max-width: 760px) {
+    .listing-card {
+        width: 48%;
+    }
+}

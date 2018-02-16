@@ -1,0 +1,22 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bree Serif', serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.App {
+  background: rgb(240, 240, 240);
+  margin: 0;
+  padding: 0;
+  color: rgb(45, 60, 77);
+}

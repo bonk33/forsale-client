@@ -129,7 +129,7 @@
 .logout-button {
     padding: 8px 12px;
     font-family: "Bree serif", serif;
-    box-radius: 3px;
+    border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px -2px 0px 0px inset;
     border: none;
     cursor: pointer;

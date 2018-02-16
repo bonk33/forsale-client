@@ -57,7 +57,7 @@ class App extends Component {
         <div>
             <Header currentUser={this.state.currentUser} authenticated={this.state.authenticated} setLogout={this.setLogout}/>
             <div className="container">
-              <AppRoutes setLogin={this.setLogin} />
+              {/* <AppRoutes setLogin={this.setLogin} /> */}
             </div>
             <Footer />
           </div>

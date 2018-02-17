@@ -4,8 +4,10 @@ import Dropzone from 'react-dropzone';
 import { requestWithAuth } from '../../utils/resquests';
 import { CLOUDINARY_API_KEY, CLOUDINARY_URL, CLOUDINARY_UPLOAD_PRESET } from '../../utils/cloudinaryVars';
 import './CreateListing.css';
+import { graphql } from 'react-apollo';
+import { getCategories } from '../../Queries';
 
-export default class CreateListing extends Component {
+class CreateListing extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +15,6 @@ export default class CreateListing extends Component {
             imageFile: null,
             description: '',
             price: 0,
-            categoryOptions: [],
             category: 'Electronics'
         }
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -84,27 +85,10 @@ export default class CreateListing extends Component {
         .catch((err) => console.log(err));
     }
 
-    componentDidMount() {
-        // requestwithAuth.get('/categories')
-        // .then((response) => {
-        //     console.log(response.data)
-        //     const categories = response.data.map(data => ({id: data.id, name: data.name}))
-        //     this.setState({
-        //         categoryOptions: categories
-        //     })
-        //     console.log(this.state.categoryOptions)
-        // })
-    }
-    componentWillReceiveProps(props) {
-        const categories = this.props.categories.map(data => ({id: data.id, name: data.name}))
-        this.setState({
-            categoryOptions: categories
-        })
-    }
-
     render() {
+        const categories = this.props.data.categories
         return (
-            <div>
+            <div className="listing-form-page" >
             <form className="listing-form" onSubmit={this.handleSubmit}>
                 <Dropzone className="listing-dropzone" onDrop={this.handleDrop}>
                     Drag imgaes here or click to upload
@@ -118,15 +102,19 @@ export default class CreateListing extends Component {
                 <textarea className="listing-form-input" onChange={this.handleDescriptionField} value={this.state.description} name="code" rows="4" cols="50"></textarea><br />
                 <label htmlFor="price">Price</label>
                 <input className="listing-form-input" onChange={this.handlePriceField} type="number" name="price" /><br />
-                <select onChange={this.handleCategoryField} value={this.state.category} name="style" id="">
+                <select className="listing-form-select" onChange={this.handleCategoryField} value={this.state.category} name="style" id="">
                     {
-                        this.state.categoryOptions.map((option) => <option key= {option.id} value={option.id}>{option.name}</option>)
+                        categories ?
+                        categories.map((option) => <option key= {option.id} value={option.id}>{option.name}</option>)
+                        :
+                        "loading"
                     }
                 </select><br />
-                <input type="submit" value="Create Listing" />
+                <input className="listing-form-button" type="submit" value="Create Listing" />
             </form>
-            <h1>The title is {this.state.title}, the description is {this.state.description}, price is GHC{this.state.price} in category {this.state.category}</h1>
             </div>
         )
     }
 }
+
+export default graphql(getCategories)(CreateListing);

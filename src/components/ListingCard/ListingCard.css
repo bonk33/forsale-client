@@ -9,7 +9,9 @@
     margin: 0.2rem;
     transition: box-shadow 0.5s;
 }
-
+.listing-card a {
+    text-decoration: none;
+}
 .listing-card:hover {
     transition: box-shadow 0.5s;
     box-shadow: 1px 2px 4px 0 rgba(0,0,0,.28)

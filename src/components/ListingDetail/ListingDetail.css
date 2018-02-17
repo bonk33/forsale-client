@@ -1,8 +1,143 @@
 
 .listing-detail {
-    background: white;
-    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
     margin: 2rem auto;
+}
+
+.listing-detail-main {
+    background: white;
     border-radius: 3px;
     font-family: "Roboto", sans-serif;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .14);
+    flex: 0 0 70%;
+}
+
+.listing-detail-header {
+    font-weight: 300;
+    color: #2d3c4d;
+    padding: 20px;
+    display: flex;
+}
+
+.listing-detail-title {
+    font-weight: 300;
+}
+
+.listing-detail-save-button {
+    color: white;
+    display: block;
+    text-decoration: none;
+    background: rgb(17, 109, 180);
+    box-shadow : inset 0 -2px 0 0 #0f61a1;
+    padding: 8px 12px;
+    text-align: center;
+    width: 100px;
+    margin: auto;
+    border-radius: 3px;
+    border: none;
+    
+}
+
+.listing-detail-save-button:hover {
+    background: rgb(10, 136, 233);
+}
+
+.listing-detail-center {
+    background: rgb(247, 247, 246);
+    border-top: 1px solid rgb(230, 228, 225);
+    color: rgb(45, 60, 77);
+    font-size: 16px;
+    font-weight: 300;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listing-detail-photos {
+    width: 350px;
+    overflow: hidden;
+    background: white;
+}
+.listing-detail-photos-figure {
+    height: 340px;
+    line-height: 240px;
+    background: white;
+}
+
+.listing-detail-image {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+.listing-detail-center-content {
+    width: 300px;
+    padding: 20px;
+}
+.listing-detail-price {
+    font-family: "Bree serif", serif;
+    font-size: 1.6rem
+}
+.listing-detail-content {
+    border-top: 1px solid rgb(230, 228, 225);
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+}
+.listing-detail-content-heading {
+    font-family: "Bree serif", serif;
+    font-weight: 400;
+}
+.listing-detail-share {
+    background: rgb(255, 251, 225);
+    border-top: 1px solid rgb(230, 228, 225);
+    color: rgb(45, 60, 77);
+    font-size: 16px;
+    font-weight: 300;
+    padding: 20px;
+    display: flex;
+}
+.listing-detail-share > p {
+
+}
+.listing-detail-share-icon {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.listing-detail-side {
+    background: rgb(255, 251, 225);
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .14);
+    flex: 0 0 28%;
+    padding: 20px;
+}
+
+.listing-side-heading {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.listing-owner-details {
+    padding: 0;
+}
+.listing-owner-contact {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 800px) {
+    .listing-detail {
+        flex-direction: column;
+    }
+    .listing-detail-side {
+        background: white;
+        margin-top: 2rem;
+    }
 }
